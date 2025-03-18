@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml>
+// Star (wildcard) allows you to just single out a word/phrase. Index = 2 is the amount of words it will index after the pattern is entered
+  <category>
+      <pattern>* LONDON *</pattern>
+      <template> <star index = "2"></star> </template>
+  </category>
+// Introduction, breaking down response into logic vs. visual preference  
+  <category>
+    <pattern>Hello</pattern>
+    <template>Hello, and welcome to the career advice chatbot! Tell me more about what you're interested in.
+    <button>
+        <text>I'm more of a logic focused person.</text>
+        <postback>logic</postback>
+    </button>
+    <button>
+        <text>I'm more of a visual focused person.</text>
+        <postback>visual</postback>
+    </button>
+    </template>
+  </category>
+  <category>
+        <pattern>visual</pattern>
+        <template>You're a visual learner! Of these two options, which do you prefer?
+        <button>
+            <text>I like to problem solve how visual aspects function.</text>
+            <postback>frontend</postback>
+        </button>
+         <button>
+            <text>I like to organize how things look.</text>
+            <postback>uxdesign</postback>
+        </button>      
+        </template>
+  </category>
+  <category>
+      <pattern>frontend</pattern>
+      <template>It seems like a Front-End Developer would suit you well!
+      <link>
+          <text>Click here to learn more!</text>
+          <url>https://www.coursera.org/articles/front-end-developer</url>
+      </link>
+      </template>
+  </category>
+  <category>
+      <pattern>uxdesign</pattern>
+      <template>It seems like a UX Designer would suit you well!
+      <link>
+          <text>Click here to learn more!</text>
+          <url>https://www.coursera.org/articles/what-does-a-ux-designer-do</url>
+      </link>
+      </template>
+  </category>
+  <category>
+    <pattern>logic</pattern>
+    <template>You're more into logic! Of these three options, which would you prefer?
+    <button>
+        <text>I like to build and create projects.</text>
+        <postback>backend</postback>
+    </button>
+    <button>
+        <text>I like working with data and statistics.</text>
+        <postback>dataanalytics</postback>
+    </button>
+    <button>
+        <text>I'm more into exploring how things can be broken and protected.</text>
+        <postback>cybersecurity</postback>
+    </button>
+    </template>
+  </category>
+  <category>
+      <pattern>backend</pattern>
+      <template>It seems like a Backend Developer would suit you well!
+      <link>
+          <text>Click here to learn more!</text>
+          <url>https://www.coursera.org/articles/back-end-developer</url>
+      </link>
+      </template>
+  </category>
+    <category>
+      <pattern>dataanalytics</pattern>
+      <template>It seems like a Data Analyst would suit you well!
+      <link>
+          <text>Click here to learn more!</text>
+          <url>https://www.coursera.org/articles/what-does-a-data-analyst-do-a-career-guide</url>
+      </link>
+      </template>
+  </category>
+      <category>
+      <pattern>cybersecurity</pattern>
+      <template>It seems like a Cyber Security Analyst would suit you well!
+      <link>
+          <text>Click here to learn more!</text>
+          <url>https://www.coursera.org/articles/cybersecurity-analyst-job-guide</url>
+      </link>
+      </template>
+  </category>
+
+</aiml>
